@@ -4,4 +4,4 @@ The calculator accepts two numbers and can perform basic arithmetic functions su
 
 # Future Plans
 
-As my skills develope, I want to improve on its functionality such as expanding numbers that can be passed in, more advance arithmetic functions just to name a few. 
+As my skills develop, I want to improve on its functionality such as expanding numbers that can be passed in, more advance arithmetic functions just to name a few. 
