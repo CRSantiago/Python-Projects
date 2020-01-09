@@ -1,2 +1,2 @@
 # Python-Projects
-This is repository with various coding challenges that I have completed using Python
+This is repository with various coding challenges or small projects I have built using Python
