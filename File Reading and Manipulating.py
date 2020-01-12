@@ -59,7 +59,8 @@ print("Average length of call, by type: ")
 for keys, values in average_call_dict.items():
     average_call_dict[keys] = sum(values) / float(len(values))
     
-print(average_call_dict)
+for key,value in average_call_dict.items():
+  print('{} | {}'.format(key,value))
 
 f = open('fire_clean.csv')
 reader = csv.DictReader(f)
