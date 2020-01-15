@@ -105,19 +105,16 @@ def take_bet(chips):
             chips.bet = int(input("Enter the bet you want to wage: "))
         except ValueError:
             print("Sorry, a bet must be an integer!")
-            continue
         else:
             if chips.bet > chips.total:
                 print("That's too high of a bet. Your bet can't exceed " + str(chips.total))
-                continue
             else:
                 print("Bet placed.")
                 break
 
 def hit(deck,hand):
     hand.add_card(deck.deal())
-    if hand.value > 21:
-        hand.adjust_for_ace()
+    hand.adjust_for_ace()
 
 def hit_or_stand(deck,hand):
     global playing
@@ -200,7 +197,6 @@ while True:
 
         # Prompt for Player Hit or Stand
         hit_or_stand(deck, player_hand)
-        print()
 
         # Show cards, keeping one dealer card hidden
         show_some(player_hand, dealer_hand)
@@ -214,14 +210,14 @@ while True:
     if player_hand.value <= 21:
 
         while dealer_hand.value < 17:
-            hit_or_stand(deck, dealer_hand)
+            hit(deck, dealer_hand)
 
         # Show all cards
         show_all(player_hand, dealer_hand)
 
         # Test different winning scenarios
         if dealer_hand.value > 21:
-            dealer_bust(player_hand, dealer_bust, player_chips)
+            dealer_bust(player_hand, dealer_hand, player_chips)
         elif dealer_hand.value > player_hand.value:
             dealer_wins(player_hand, dealer_hand, player_chips)
         elif dealer_hand.value < player_hand.value:
